@@ -1,0 +1,7 @@
+{
+  "name": "Assignment1CashRegister",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

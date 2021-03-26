@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Restock</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+<ion-item size='3'>
+  <ion-input [(ngModel)]="qty"></ion-input>
+  <ion-button (click)='onRestockClick()'>Restock Quantity</ion-button>
+</ion-item>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]='value_selected'>
+    <ion-item *ngFor='let product of products'>
+      <ion-radio slot="start" value="{{product.name}}"></ion-radio>
+      <ion-label>{{product.name}} </ion-label>
+      <ion-label>{{product.quantity}} </ion-label>
+    </ion-item>
+  </ion-radio-group>
+  </ion-list>
+
+</ion-content>
